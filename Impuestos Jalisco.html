@@ -11,8 +11,13 @@
       font-family: Calibri;
     }
 
+    button {
+      transition-duration: 0.5s;
+    }
+
     button:hover {
-      background-color: blue;
+      background-color: rgb(15, 163, 189);
+      transform: scale(0.9);
     }
 
     input[type=number]::-webkit-outer-spin-button,
@@ -22,16 +27,15 @@
     }
 
     input[type=number] {
-
       -moz-appearance: textfield;
-
     }
+
   </style>
   <title>Calculadora de Impuestos - Jalisco</title>
 </head>
 
 <body>
-  <h1>Calculadora de impuestos - Jalisco</h1>
+  <h1>Calculadora de impuestos de compra venta - Jalisco</h1>
   <input style="height: 100px; width: 500px; font-size: 30px; text-align: center; padding: 0px; margin: 0;" id="input"
     type="number" title="Ingrese la cantidad que desea calcular su impuesto" onkeyup="activadoraTecla(event)"></input>
   <button style="height: 100px; width: 300px; font-size: 30px;" id="boton">Obtener resultado</button>
@@ -86,7 +90,7 @@
 
       let resultado = (calculadoraDeImpuestos(input)).toFixed(2)
 
-      console.log(resultado)
+      console.log(`${input} ===> ${resultado}`)
       output.innerHTML = `<br><br /><button href="#" style="font-size: 30px;" title="Click para copiar la cantidad al portapapeles." onclick="copiarAlPortapapeles()">Impuestos a pagar: <p onclick="copiarAlPortapapeles()" id="resultado">${resultado}</p></button>
       <br /> <h3>Cantidad ingresada: ${addCommas(input)} / Resultado: ${addCommas(resultado)}</h3>
       `
@@ -109,6 +113,12 @@
       document.body.removeChild(aux);
     }
 
+    document.getElementById('input').addEventListener('keydown', function(e) {
+        if (e.which === 38 || e.which === 40) {
+          e.preventDefault();
+        }
+    });
+
     //Codigo normal
 
     var boton = document.getElementById("boton")
@@ -120,5 +130,10 @@
 
   </script>
 </body>
+<footer>
+  <br />
+  <img src="https://i.imgur.com/SHNCE1x.png" alt="f4">
+  <h5>Nota: Puede checar el historial de conversiones presinando la tecla F12 (Si está en Chrome).</h5>
+</footer>
 
 </html>
