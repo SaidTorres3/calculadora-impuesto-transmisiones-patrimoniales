@@ -49,12 +49,22 @@
             transform: scale(1.5);
             color: goldenrod;
         }
+
+        iframe {
+            width: 100%;
+            height: 90%;
+            border: none;
+            float: left;
+            overflow:hidden;
+        }
+
+        iframe::-webkit-scrollbar { width: 0 !important }
     </style>
     <title>Calculadora de Impuesto | Transmisiones Patrimoniales</title>
 </head>
 
-<body>
-    <div style="float: left; text-align: center; width: 300px; height: 100%;">
+<body style="display:flex; flex-direction: row; height: 100%; text-align: center;"></div>
+    <div style="flex-grow: 0;">
         <ul>
             <div style="line-height: 30px; font-size: 40px;">Selecciona el municipio:</div>
             <br>
@@ -68,7 +78,7 @@
 
     <!-- Puerto Vallarta -->
 
-    <div class="centradificador" id="Calculadora">
+    <div class="" id="Calculadora" style="flex-grow: 1; width: 100%; margin: none;">
         <br>
         <br>
         <br>
@@ -85,35 +95,35 @@
 
             if (peticion == "PuertoVallarta") {
                 document.getElementById("Calculadora").innerHTML = `
-                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Puerto Vallarta - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Puerto Vallarta - Impuesto Transmisiones Patrimoniales.html">
                 </iframe>
                 `
             }
 
             if (peticion == "Mascota") {
                 document.getElementById("Calculadora").innerHTML = `
-                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Mascota - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Mascota - Impuesto Transmisiones Patrimoniales.html">
                 </iframe>
                 `
             }
 
             if (peticion == "Guadalajara") {
                 document.getElementById("Calculadora").innerHTML = `
-                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Guadalajara - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Guadalajara - Impuesto Transmisiones Patrimoniales.html">
                 </iframe>
                 `
             }
 
             if (peticion == "SanSebastian") {
                 document.getElementById("Calculadora").innerHTML = `
-                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/San Sebastián del Oeste - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/San Sebastián del Oeste - Impuesto Transmisiones Patrimoniales.html">
                 </iframe>
                 `
             }
 
             if (peticion == "Zapopan") {
                 document.getElementById("Calculadora").innerHTML = `
-                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Zapopan - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Zapopan - Impuesto Transmisiones Patrimoniales.html">
                 </iframe>
                 `
             }
