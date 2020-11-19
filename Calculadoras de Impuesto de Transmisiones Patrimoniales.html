@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            padding-top: 20px;
+            font-family: Calibri;
+        }
+
+        .centradificador {
+            align-items: center;
+            text-align: center;
+        }
+
+        button {
+            transition-duration: 0.5s;
+        }
+
+        button:hover {
+            background-color: rgb(15, 163, 189);
+            transform: scale(0.9);
+        }
+
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        ul {
+            list-style-type: none;
+            line-height: 70px;
+        }
+
+        li {
+            transition-duration: 0.7s;
+            font-size: 30px;
+            font-family: Calibri;
+            cursor: pointer;
+        }
+
+        li:hover {
+            transform: scale(1.5);
+            color: goldenrod;
+        }
+    </style>
+    <title>Calculadora de Impuesto | Transmisiones Patrimoniales</title>
+</head>
+
+<body>
+    <div style="float: left; text-align: center; width: 300px; height: 100%;">
+        <ul>
+            <div style="line-height: 30px; font-size: 40px;">Selecciona el municipio:</div>
+            <br>
+            <li onclick="cambiarMunicipio('PuertoVallarta')">Puerto Vallarta</li>
+            <li onclick="cambiarMunicipio('Mascota')">Mascota</li>
+            <li onclick="cambiarMunicipio('Guadalajara')">Guadalajara</li>
+            <li onclick="cambiarMunicipio('SanSebastian')">San Sebástian</li>
+            <li onclick="cambiarMunicipio('Zapopan')">Zapopan</li>
+        </ul>
+    </div>
+
+    <!-- Puerto Vallarta -->
+
+    <div class="centradificador" id="Calculadora">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 style="font-size: 100px;">Seleccione un municipio.</h1>
+    </div>
+
+    <script>
+        function cambiarMunicipio(peticion) {
+
+            if (peticion == "PuertoVallarta") {
+                document.getElementById("Calculadora").innerHTML = `
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Puerto Vallarta - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                </iframe>
+                `
+            }
+
+            if (peticion == "Mascota") {
+                document.getElementById("Calculadora").innerHTML = `
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Mascota - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                </iframe>
+                `
+            }
+
+            if (peticion == "Guadalajara") {
+                document.getElementById("Calculadora").innerHTML = `
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Guadalajara - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                </iframe>
+                `
+            }
+
+            if (peticion == "SanSebastian") {
+                document.getElementById("Calculadora").innerHTML = `
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/San Sebastián del Oeste - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                </iframe>
+                `
+            }
+
+            if (peticion == "Zapopan") {
+                document.getElementById("Calculadora").innerHTML = `
+                <iframe src="./Calculadoras de Impuesto de Transmisiones Patrimoniales/Zapopan - Impuesto Transmisiones Patrimoniales.html" width="80%" height="1200px" style="border:none; float: left;">
+                </iframe>
+                `
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
